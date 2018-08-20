@@ -16,4 +16,3 @@ $res=session('user_id');
 	$res?true:false;
 	}
 
-}
