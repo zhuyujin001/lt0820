@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:74:"F:\p2\PHPTutorial\WWW\lt\public/../application/admin\view\index\index.html";i:1534906877;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_meta.html";i:1534755869;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_header.html";i:1490074809;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_menu.html";i:1534834653;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_footer.html";i:1534755934;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:72:"F:\p2\PHPTutorial\WWW\lt\public/../application/admin\view\pic\lists.html";i:1534918263;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_meta.html";i:1534755869;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_header.html";i:1534921577;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_menu.html";i:1534834653;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_footer.html";i:1534755934;}*/ ?>
 ﻿<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
@@ -25,13 +25,10 @@
 <script>DD_belatedPNG.fix('*');</script><![endif]-->
 <!--/meta 作为公共模版分离出去-->
 
-<title>H-ui.admin v3.0</title>
-<meta name="keywords" content="H-ui.admin v3.0,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
-<meta name="description" content="H-ui.admin v3.0，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+<title>图片列表</title>
 </head>
 <body>
 <!--_header 作为公共模版分离出去-->
-
 <header class="navbar-wrapper">
 	<div class="navbar navbar-fixed-top">
 		<div class="container-fluid cl"> <a class="logo navbar-logo f-l mr-10 hidden-xs" href="/aboutHui.shtml">H-ui.admin</a> <a class="logo navbar-logo-m f-l mr-10 visible-xs" href="/aboutHui.shtml">H-ui</a> <span class="logo navbar-slogan f-l mr-10 hidden-xs">v3.0</span> <a aria-hidden="false" class="nav-toggle Hui-iconfont visible-xs" href="javascript:;">&#xe667;</a>
@@ -39,10 +36,10 @@
 				<ul class="cl">
 					<li class="dropDown dropDown_hover"><a href="javascript:;" class="dropDown_A"><i class="Hui-iconfont">&#xe600;</i> 新增 <i class="Hui-iconfont">&#xe6d5;</i></a>
 						<ul class="dropDown-menu menu radius box-shadow">
-							<li><a href="javascript:;" onclick="article_add('添加资讯','article-add.html')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
-							<li><a href="javascript:;" onclick="picture_add('添加资讯','picture-add.html')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
+							<li><a href="javascript:;" onclick="article_add('添加资讯','<?php echo url('article/adds'); ?>')"><i class="Hui-iconfont">&#xe616;</i> 资讯</a></li>
+							<li><a href="javascript:;" onclick="picture_add('添加资讯','<?php echo url('pic/add'); ?>')"><i class="Hui-iconfont">&#xe613;</i> 图片</a></li>
 							<li><a href="javascript:;" onclick="product_add('添加资讯','product-add.html')"><i class="Hui-iconfont">&#xe620;</i> 产品</a></li>
-							<li><a href="javascript:;" onclick="member_add('添加用户','member-add.html','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
+							<li><a href="javascript:;" onclick="member_add('添加用户','<?php echo url('member/add'); ?>','','510')"><i class="Hui-iconfont">&#xe60d;</i> 用户</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -169,180 +166,49 @@
 <!--/_menu 作为公共模版分离出去-->
 
 <section class="Hui-article-box">
-	<nav class="breadcrumb"><i class="Hui-iconfont"></i> <a href="/" class="maincolor">首页</a> 
-		<span class="c-999 en">&gt;</span>
-		<span class="c-666">我的桌面</span> 
-		<a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+	<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 图片管理 <span class="c-gray en">&gt;</span> 图片列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
 	<div class="Hui-article">
 		<article class="cl pd-20">
-			<p class="f-20 text-success">欢迎使用H-ui.admin
-				<span class="f-14">v2.3</span>
-				后台模版！</p>
-			<p>登录次数：18 </p>
-			<p>上次登录IP：222.35.131.79.1  上次登录时间：2014-6-14 11:19:55</p>
-			<table class="table table-border table-bordered table-bg">
-				<thead>
-					<tr>
-						<th colspan="7" scope="col">信息统计</th>
-			</tr>
-					<tr class="text-c">
-						<th>统计</th>
-						<th>资讯库</th>
-						<th>图片库</th>
-						<th>产品库</th>
-						<th>用户</th>
-						<th>管理员</th>
-			</tr>
-		</thead>
-				<tbody>
-					<tr class="text-c">
-						<td>总数</td>
-						<td>92</td>
-						<td>9</td>
-						<td>0</td>
-						<td>8</td>
-						<td>20</td>
-			</tr>
-					<tr class="text-c">
-						<td>今日</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-			</tr>
-					<tr class="text-c">
-						<td>昨日</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-			</tr>
-					<tr class="text-c">
-						<td>本周</td>
-						<td>2</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-			</tr>
-					<tr class="text-c">
-						<td>本月</td>
-						<td>2</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-						<td>0</td>
-			</tr>
-		</tbody>
-	</table>
-			<table class="table table-border table-bordered table-bg mt-20">
-				<thead>
-					<tr>
-						<th colspan="2" scope="col">服务器信息</th>
-			</tr>
-		</thead>
-				<tbody>
-					<tr>
-						<th width="30%">服务器计算机名</th>
-						<td><span id="lbServerName">http://127.0.0.1/</span></td>
-			</tr>
-					<tr>
-						<td>服务器IP地址</td>
-						<td>192.168.1.1</td>
-			</tr>
-					<tr>
-						<td>服务器域名</td>
-						<td>www.h-ui.net</td>
-			</tr>
-					<tr>
-						<td>服务器端口 </td>
-						<td>80</td>
-			</tr>
-					<tr>
-						<td>服务器IIS版本 </td>
-						<td>Microsoft-IIS/6.0</td>
-			</tr>
-					<tr>
-						<td>本文件所在文件夹 </td>
-						<td>D:\WebSite\HanXiPuTai.com\XinYiCMS.Web\</td>
-			</tr>
-					<tr>
-						<td>服务器操作系统 </td>
-						<td>Microsoft Windows NT 5.2.3790 Service Pack 2</td>
-			</tr>
-					<tr>
-						<td>系统所在文件夹 </td>
-						<td>C:\WINDOWS\system32</td>
-			</tr>
-					<tr>
-						<td>服务器脚本超时时间 </td>
-						<td>30000秒</td>
-			</tr>
-					<tr>
-						<td>服务器的语言种类 </td>
-						<td>Chinese (People's Republic of China)</td>
-			</tr>
-					<tr>
-						<td>.NET Framework 版本 </td>
-						<td>2.050727.3655</td>
-			</tr>
-					<tr>
-						<td>服务器当前时间 </td>
-						<td>2014-6-14 12:06:23</td>
-			</tr>
-					<tr>
-						<td>服务器IE版本 </td>
-						<td>6.0000</td>
-			</tr>
-					<tr>
-						<td>服务器上次启动到现在已运行 </td>
-						<td>7210分钟</td>
-			</tr>
-					<tr>
-						<td>逻辑驱动器 </td>
-						<td>C:\D:\</td>
-			</tr>
-					<tr>
-						<td>CPU 总数 </td>
-						<td>4</td>
-			</tr>
-					<tr>
-						<td>CPU 类型 </td>
-						<td>x86 Family 6 Model 42 Stepping 1, GenuineIntel</td>
-			</tr>
-					<tr>
-						<td>虚拟内存 </td>
-						<td>52480M</td>
-			</tr>
-					<tr>
-						<td>当前程序占用内存 </td>
-						<td>3.29M</td>
-			</tr>
-					<tr>
-						<td>Asp.net所占内存 </td>
-						<td>51.46M</td>
-			</tr>
-					<tr>
-						<td>当前Session数量 </td>
-						<td>8</td>
-			</tr>
-					<tr>
-						<td>当前SessionID </td>
-						<td>gznhpwmp34004345jz2q3l45</td>
-			</tr>
-					<tr>
-						<td>当前系统用户名 </td>
-						<td>NETWORK SERVICE</td>
-			</tr>
-		</tbody>
-	</table>
-</article>
-		<footer class="footer">
-			<p>感谢jQuery、layer、laypage、Validform、UEditor、My97DatePicker、iconfont、Datatables、WebUploaded、icheck、highcharts、bootstrap-Switch<br> Copyright &copy;2015 H-ui.admin v3.0 All Rights Reserved.<br> 本后台系统由<a href="http://www.h-ui.net/" target="_blank" title="H-ui前端框架">H-ui前端框架</a>提供前端技术支持</p>
-</footer>
-</div>
+			<div class="text-c"> 日期范围：
+				<input type="text" onfocus="WdatePicker({maxDate:'#F{   $dp.$D(\'logmax\')||\'%y-%M-%d\'}'})" id="logmin" class="input-text Wdate" style="width:120px;">
+				-
+				<input type="text" onfocus="WdatePicker({minDate:'#F{   $dp.$D(\'logmin\')}',maxDate:'%y-%M-%d'})" id="logmax" class="input-text Wdate" style="width:120px;">
+				<input type="text" name="" id="" placeholder=" 图片名称" style="width:250px" class="input-text">
+				<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜图片</button>
+			</div>
+			<div class="cl pd-5 bg-1 bk-gray mt-20"> <span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a> <a class="btn btn-primary radius" onclick="picture_add('添加图片','<?php echo url('pic/add'); ?>')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加图片</a></span> <span class="r">共有数据：<strong>54</strong> 条</span> </div>
+			<div class="mt-20">
+				<table class="table table-border table-bordered table-bg table-hover table-sort">
+					<thead>
+						<tr class="text-c">
+							<th width="40"><input name="" type="checkbox" value=""></th>
+							<th width="80">ID</th>
+							<th width="100">分类</th>
+							<th width="100">封面</th>
+							<th>图片名称</th>
+							<th width="150">Tags</th>
+							<th width="150">更新时间</th>
+							<th width="60">发布状态</th>
+							<th width="100">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="text-c">
+							<td><input name="" type="checkbox" value=""></td>
+							<td>001</td>
+							<td>分类名称</td>
+							<td><a href="javascript:;" onClick="picture_edit('图库编辑','<?php echo url('pic/show'); ?>','10001')"><img width="100" class="picture-thumb" src="pic/200x150.jpg"></a></td>
+							<td class="text-l"><a class="maincolor" href="javascript:;" onClick="picture_edit('图库编辑','<?php echo url('pic/show'); ?>','10001')">现代简约 白色 餐厅</a></td>
+							<td class="text-c">标签</td>
+							<td>2014-6-11 11:11:42</td>
+							<td class="td-status"><span class="label label-success radius">已发布</span></td>
+							<td class="td-manage"><a style="text-decoration:none" onClick="picture_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_edit('图库编辑','<?php echo url('pic/add'); ?>','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a> <a style="text-decoration:none" class="ml-5" onClick="picture_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</article>
+	</div>
 </section>
 
 <!--_footer 作为公共模版分离出去-->
@@ -358,11 +224,100 @@
 <!--/_footer /作为公共模版分离出去-->
 
 <!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/lt/public/static/admin/
+lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/lt/public/static/admin/
+lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/lt/public/static/admin/
+lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
+$('.table-sort').dataTable({
+	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
+	"bStateSave": true,//状态保存
+	"aoColumnDefs": [
+	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+	  {"orderable":false,"aTargets":[0,8]}// 制定列不参与排序
+	]
+});
+/*图片-添加*/
+function picture_add(title,url){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*图片-查看*/
+function picture_show(title,url,id){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*图片-审核*/
+function picture_shenhe(obj,id){
+	layer.confirm('审核文章？', {
+		btn: ['通过','不通过'], 
+		shade: false
+	},
+	function(){
+		$(obj).parents("tr").find(".td-manage").prepend('<a class="c-primary" onClick="picture_start(this,id)" href="javascript:;" title="申请上线">申请上线</a>');
+		$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已发布</span>');
+		$(obj).remove();
+		layer.msg('已发布', {icon:6,time:1000});
+	},
+	function(){
+		$(obj).parents("tr").find(".td-manage").prepend('<a class="c-primary" onClick="picture_shenqing(this,id)" href="javascript:;" title="申请上线">申请上线</a>');
+		$(obj).parents("tr").find(".td-status").html('<span class="label label-danger radius">未通过</span>');
+		$(obj).remove();
+    	layer.msg('未通过', {icon:5,time:1000});
+	});	
+}
+/*图片-下架*/
+function picture_stop(obj,id){
+	layer.confirm('确认要下架吗？',function(index){
+		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="picture_start(this,id)" href="javascript:;" title="发布"><i class="Hui-iconfont">&#xe603;</i></a>');
+		$(obj).parents("tr").find(".td-status").html('<span class="label label-defaunt radius">已下架</span>');
+		$(obj).remove();
+		layer.msg('已下架!',{icon: 5,time:1000});
+	});
+}
 
+/*图片-发布*/
+function picture_start(obj,id){
+	layer.confirm('确认要发布吗？',function(index){
+		$(obj).parents("tr").find(".td-manage").prepend('<a style="text-decoration:none" onClick="picture_stop(this,id)" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>');
+		$(obj).parents("tr").find(".td-status").html('<span class="label label-success radius">已发布</span>');
+		$(obj).remove();
+		layer.msg('已发布!',{icon: 6,time:1000});
+	});
+}
+/*图片-申请上线*/
+function picture_shenqing(obj,id){
+	$(obj).parents("tr").find(".td-status").html('<span class="label label-default radius">待审核</span>');
+	$(obj).parents("tr").find(".td-manage").html("");
+	layer.msg('已提交申请，耐心等待审核!', {icon: 1,time:2000});
+}
+/*图片-编辑*/
+function picture_edit(title,url,id){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*图片-删除*/
+function picture_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$(obj).parents("tr").remove();
+		layer.msg('已删除!',{icon:1,time:1000});
+	});
+}
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
-
-
 </body>
 </html>
