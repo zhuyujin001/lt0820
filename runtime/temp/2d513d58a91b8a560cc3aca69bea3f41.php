@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:76:"F:\p2\PHPTutorial\WWW\lt\public/../application/admin\view\article\lists.html";i:1534811619;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_meta.html";i:1534755869;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_header.html";i:1490074809;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_menu.html";i:1534834653;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_footer.html";i:1534755934;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:76:"F:\p2\PHPTutorial\WWW\lt\public/../application/admin\view\article\lists.html";i:1534917688;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_meta.html";i:1534755869;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_header.html";i:1490074809;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_menu.html";i:1534834653;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_footer.html";i:1534755934;}*/ ?>
 ﻿<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
@@ -186,16 +186,16 @@
 				</select>
 				</span>
 				日期范围：
-				<input type="text" onfocus="WdatePicker({maxDate:'#F<?php echo '%y-%M-%d'($dp.$D('logmax')); ?>'})" id="logmin" class="input-text Wdate" style="width:120px;">
+				<input type="text" onfocus="WdatePicker({maxDate:'#F{      $dp.$D(\'logmax\')||\'%y-%M-%d\' }'})" id="logmin" class="input-text Wdate" style="width:120px;">
 				-
-				<input type="text" onfocus="WdatePicker({minDate:'#F<?php echo $dp.$D('logmin'); ?>',maxDate:'%y-%M-%d'})" id="logmax" class="input-text Wdate" style="width:120px;">
+				<input type="text" onfocus="WdatePicker({ minDate:'#F{   $dp.$D(\'logmin\') }',maxDate:'%y-%M-%d' })" id="logmax" class="input-text Wdate" style="width:120px;">
 				<input type="text" name="" id="" placeholder=" 资讯名称" style="width:250px" class="input-text">
 				<button name="" id="" class="btn btn-success" type="submit"><i class="Hui-iconfont">&#xe665;</i> 搜资讯</button>
 			</div>
 			<div class="cl pd-5 bg-1 bk-gray mt-20">
 				<span class="l">
 				<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>
-				<a class="btn btn-primary radius" data-title="添加资讯" _href="<?php echo url('article/adds'); ?>" onclick="article_add('添加资讯','article-add.html')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加资讯</a>
+				<a class="btn btn-primary radius" data-title="添加资讯" _href="<?php echo url('article/adds'); ?>" onclick="article_add('添加资讯','<?php echo url('article/adds'); ?>')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加资讯</a>
 				</span>
 				<span class="r">共有数据：<strong>54</strong> 条</span>
 			</div>

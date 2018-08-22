@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:74:"F:\p2\PHPTutorial\WWW\lt\public/../application/admin\view\index\index.html";i:1534756902;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_meta.html";i:1534755869;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_header.html";i:1490074809;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_menu.html";i:1534834653;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_footer.html";i:1534755934;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:5:{s:74:"F:\p2\PHPTutorial\WWW\lt\public/../application/admin\view\index\index.html";i:1534906877;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_meta.html";i:1534755869;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_header.html";i:1490074809;s:65:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_menu.html";i:1534834653;s:67:"F:\p2\PHPTutorial\WWW\lt\application\admin\view\common\_footer.html";i:1534755934;}*/ ?>
 ﻿<!--_meta 作为公共模版分离出去-->
 <!DOCTYPE HTML>
 <html>
@@ -363,16 +363,6 @@
 </script>
 <!--/请在上方写此页面业务相关的脚本-->
 
-<!--此乃百度统计代码，请自行删除-->
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?080836300300be57b7f34f4b3e97d911";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
-})();
-</script>
-<!--/此乃百度统计代码，请自行删除-->
+
 </body>
 </html>
